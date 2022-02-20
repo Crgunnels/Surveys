@@ -1,0 +1,48 @@
+.__dml_poll {
+    margin: 1rem;
+}
+
+.__dml_poll.vertical {
+    transform: rotate(-90deg);
+}
+
+.__dml_poll .poll-option {
+    position: relative;
+    padding: .5rem;
+    margin: 1rem;
+    right: 4rem;
+}
+
+.__dml_poll .poll-label {
+    position: relative;
+    left: .5rem;
+    color: blue;
+}
+
+.__dml_poll .poll-option .bar {
+    position: relative;
+    background-color: rgb(19, 202, 163);
+    height: 2rem;
+    margin: .5rem;
+    transition: color, background-color, max-width 200ms linear ;
+    animation: grow 1.5s forwards;
+}
+
+.__dml_poll .poll-option .votes {
+position: absolute;
+top: 2.5rem;
+left: -.25rem;
+}
+
+@keyframes grow {
+    from {
+        width: 10%;
+    }
+    to {
+        width: 100%;
+    }
+}
+
+.__dml_poll.vertical .poll-option .votes {
+    transform: rotate(90deg);
+    }
